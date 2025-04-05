@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            background-color: aquamarine;
+            height: 50vh;
+            width: 89vw;
+        }
+        img:hover{
+            width: 56px;
+        }
+
+        img{
+            width: 455px;
+            height: 500px;
+            /* transition-property: width ;
+            transition-duration: 1s;
+            transition-timing-function:ease-in-out;
+            transition-delay: 2s; */
+            transition: width 1s ease-in-out 1s, height 4s ease-in;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="Akshay_Kumar.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>

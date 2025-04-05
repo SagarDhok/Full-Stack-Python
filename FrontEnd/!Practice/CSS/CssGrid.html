@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Css Grid</title>
+    <style>
+        .container{
+            display: grid; 
+            background-color: yellow;
+            height: 56vh;
+
+
+            /* grid-template-columns: 34px 434px auto;  */
+            /* grid-template-rows: 44px 84px auto; */
+
+            /* grid-row-gap:  2px; */
+            /* grid-column-gap: 9px; */
+
+            /* justify-content: center;   */
+            /* [short hand property for grid row gap grid column gap] */
+            /* grid-gap: 10px 50px; */
+            grid-template-columns: auto auto auto auto ;
+
+            grid-gap: 10px;
+             
+             
+        }
+        .item{
+            background-color: skyblue;
+            border: 2px solid red;
+        }
+
+    </style>
+</head>
+<body>
+     <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+     </div>
+</body>
+</html>

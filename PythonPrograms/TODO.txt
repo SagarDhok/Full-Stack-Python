@@ -1,0 +1,63 @@
+#!bitwise or ^ = truth table symmetric difference , swapping , regular expresiion searches except value
+
+1 byte = 8 bits
+8 byte = 64 bits
+
+
+imp - program for searching all special symbols
+     + symbol : addition, concatenation ,representing one or more occurrence of character   
+     * multiplication , for repetation ,to represent 0 1 and more number of number of seaches in regular expresiion and also exponentiation 
+
+mobile number validation in written test  can come
+
+
+imp
+unique - only can have one not null 
+delete from employees works like truncate will delete all data 
+delete vs truncate vs table
+what is avg()
+joins most imp
+
+str_concate() - single detee
+group_concate() - we can use without distinct but not without group by 
+foreign key values must be in range of primary key 
+left and righ join union = full join 
+
+
+comman data = inner join
+left side = left join
+right side = right join
+right join and left join are same
+
+check is used when creating table and having is used while extracting data
+
+procedures cannot return
+function can rerutn in sql
+
+
+
+table are directly created
+table have indexes
+
+views are created based on quores
+view cannot have indexes
+
+
+in mongodb the aggregation stages should be in sequence
+
+grouping is most in imp only asked in mongodb  and lookup also
+
+only left join is done in lookup
+
+unwind takes an array and spilt that array in multiple way
+
+_id is different of every document in mongodb
+_ID TO IDENTIFY DIFFERENT GROUP IN ONE LIKE MALE FEMALE OTHERS IN ONE SO _ID IS USED
+
+$catogoty in group cause values of category will chanbe
+$ FOR DYNAMIC VALUES
+
+
+$OUT IS used in last stage
+
+

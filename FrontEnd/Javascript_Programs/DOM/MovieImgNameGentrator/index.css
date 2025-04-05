@@ -1,0 +1,153 @@
+/* style.css */
+
+/* General body styling */
+body {
+     font-family: 'Poppins', sans-serif;
+     margin: 0;
+     padding: 0;
+     background: linear-gradient(135deg, #74ebd5, #9face6);
+     color: #333;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     min-height: 100vh;
+ }
+ 
+ /* Styling the movie input section */
+ .movie {
+     margin-bottom: 20px;
+     text-align: center;
+     padding: 20px;
+     background: rgba(255, 255, 255, 0.8);
+     border-radius: 12px;
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+ }
+ 
+ .movie input[type="text"] {
+     padding: 12px;
+     margin: 8px;
+     border: 1px solid #ddd;
+     border-radius: 8px;
+     width: 240px;
+     font-size: 16px;
+     outline: none;
+     transition: box-shadow 0.3s ease;
+ }
+ 
+ .movie input[type="text"]:focus {
+     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+ }
+ 
+ .movie button {
+     padding: 12px 24px;
+     background-color: #007bff;
+     color: #fff;
+     border: none;
+     border-radius: 8px;
+     cursor: pointer;
+     font-size: 16px;
+     transition: background-color 0.3s ease, transform 0.2s ease;
+ }
+ 
+ .movie button:hover {
+     background-color: #0056b3;
+     transform: scale(1.05);
+ }
+ 
+ /* Styling the output div */
+ #output {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 20px;
+     justify-content: center;
+     width: 90%;
+     max-width: 1200px;
+ }
+ 
+ /* Styling individual movie cards */
+ .NewDiv {
+     background-color: #fff;
+     border: 1px solid #ddd;
+     border-radius: 12px;
+     padding: 15px;
+     text-align: center;
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+     width: 180px;
+     transform: scale(0);
+     animation: scaleUp 0.3s ease forwards;
+ }
+ 
+ .NewDiv img {
+     border-radius: 8px;
+     margin-bottom: 10px;
+     width: 100%;
+     height: auto;
+     transition: transform 0.3s ease;
+ }
+ 
+ .NewDiv img:hover {
+     transform: scale(1.1);
+ }
+ 
+ .NewDiv p {
+     font-size: 16px;
+     font-weight: bold;
+     margin: 10px 0 0;
+ }
+ 
+ /* Animation for new movie cards */
+ @keyframes scaleUp {
+     from {
+         transform: scale(0);
+         opacity: 0;
+     }
+     to {
+         transform: scale(1);
+         opacity: 1;
+     }
+ }
+ 
+ /* Media Queries */
+ @media (max-width: 768px) {
+     .movie input[type="text"] {
+         width: 180px;
+     }
+ 
+     #output {
+         gap: 15px;
+     }
+ 
+     .NewDiv {
+         width: 140px;
+     }
+ 
+     .NewDiv p {
+         font-size: 14px;
+     }
+ }
+ 
+ @media (max-width: 480px) {
+     .movie {
+         padding: 15px;
+     }
+ 
+     .movie input[type="text"] {
+         width: 150px;
+         font-size: 14px;
+     }
+ 
+     .movie button {
+         font-size: 14px;
+         padding: 10px 20px;
+     }
+ 
+     .NewDiv {
+         width: 120px;
+     }
+ 
+     .NewDiv p {
+         font-size: 12px;
+     }
+ }
+ 

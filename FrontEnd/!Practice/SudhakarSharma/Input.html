@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <script>
+          // function onload(){
+               // str = location.search
+               // document.getElementById("msg").innerHTML = str.substring(str.indexOf("=")+1)
+               // str = prompt("Enter catogary name : " ,"eg: mobiles | electronics")
+               // document.querySelector("#msg").innerHTML = str
+               function foldercreate(){
+                    folder = prompt("Enter your name : ")
+
+                    if (folder == " ")
+                    {
+                  alert("Please Enter Folder name")
+             }
+              else if (folder == null)
+              {
+                  alert("You canceled")
+              }
+              else{
+               document.querySelector("p").innerHTML += "Folder Created  : " + folder + "<br>"
+              }
+              
+
+          }
+     // }
+     </script>
+</head>
+<!-- <body onload="onload()"> -->
+<body >
+     <!-- <h1>input demo</h1>
+     <b>
+        Search For :   <span  id="msg"> </span>
+
+     </b> -->
+   <button onclick="foldercreate()">Create</button>
+     <p></p>
+
+</body>
+</html>

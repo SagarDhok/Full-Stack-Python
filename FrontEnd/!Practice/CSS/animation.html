@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            background-color: aqua;
+           
+        }
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* animation-name: widthAnimate;
+            animation-duration: 3s ;
+            animation-timing-function: ease-in-out;
+            animation-delay: 1s;
+            animation-iteration-count:infinite;
+            animation-direction:alternate-reverse ; */
+            animation: widthAnimate 3s ease-in-out 1s infinite alternate ;
+            
+        }
+        img{
+            animation: DragonAnimate 1s ease-in-out 1s infinite alternate;
+            
+            
+            /* he same banava lel animation pan ghevu shalkto 
+            animation: widthAnimate 3s ease-in-out 1s infinite alternate ; */
+            
+        }
+
+        /* @keyframes widthAnimate {
+            from{
+                width:30px;
+                height: 30px;
+            }
+            to{
+                width: 100px;
+                height: 100px;
+            }
+        } */
+               
+            @keyframes DragonAnimate {
+            0%{
+                width:30px;
+                height: 30px;
+            }
+            30%{
+                width: 130px;
+                height: 130px;
+            }
+            100%{
+                width: 190px;
+                height: 190px;
+            }
+        }
+            
+        
+            
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <div class="box">
+        </div> -->
+        <img src="pic/Dragon.png" alt="Error" >
+    </div>
+</body>
+</html>

@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap');
+
+
+*{
+     margin: 0;
+     padding: 0;
+}
+
+body{
+     background-color: black;
+}
+
+.main{
+     background-image: url(items/images/background.jpg);
+     background-position: center center;
+     background-repeat: no-repeat ;
+     background-size:max(1200px, 100vw) ;
+     height: 80vh;
+     position: relative;
+}
+
+.container{
+     height: 70vh;
+     opacity: 0.69px;
+     width: 100vw;
+     position: absolute;
+     top: 0%;
+     background-color: rgba(0, 0, 0, 0.493);
+     
+}
+
+nav{
+     max-width: 60vw;
+     margin: auto;
+     display: flex;
+     justify-content: space-between;
+     align-items: center ;
+     height: 62px;
+}
+
+nav img{
+     width: 115px;
+      position: relative;
+     z-index: 10; 
+}
+nav button{
+     height: 25px;
+     margin: 20px;
+     position: relative;
+     z-index: 10;
+}
+
+.text{
+     font-family: 'Martel Sans', sans-serif;
+     height: calc(100% - 62px);
+     color: white;
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     gap: 15px;
+     padding: 0 25px;
+}
+ 
+.text >:first-child{
+     font-weight: 900;
+     font-size: 48px;
+        text-align: center;
+     }
+     
+     .text >:nth-child(2){
+          font-weight: 400;
+          font-size: 24px;
+          text-align: center;
+     }
+     
+     .text >:nth-child(3){
+          font-weight: 400;
+          font-size: 20px;
+          text-align: center;
+}
+
+.divider{
+     height: 7px;
+     background-color: rgb(67, 66, 66);
+    
+}
+
+.btn{
+padding: 3px 8px;
+font-weight: 400;
+background-color: transparent;
+color: rgba(220, 212, 212, 0.473);
+border: 1px solid white;
+border-radius: 4px;
+cursor: pointer;
+}
+
+.btn-signin{  
+     background-color: red;
+     color: white;
+border-radius: 4px;
+
+}
+
+.text-button{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           gap: 16px;
+}
+
+.text input{
+     padding: 7px 10px 8px 14px;
+     font-weight: 900;
+     font-size: 12px;
+     border-radius: 4px;
+     background-color: rgba(23,23,23,0.7);
+     width: 212px;
+     color: aliceblue;
+     border: 1px solid rgba(220, 212, 212, 0.5);
+
+}
+
+
+.btn-gs{
+     background-color: red;
+     color: white;
+     padding: 3px 24px;
+     font-size: 20px;
+     border-radius: 4px;
+}
+
+.first{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     color: white;
+     max-width: 70vw;
+     margin: auto;
+}
+
+.first-box{
+  position: relative;
+}
+
+.first-box img{
+     width: 36vw;
+     position: relative;
+     z-index: 10;
+}
+.first-box video{
+     position: absolute; 
+     top: 51px;
+     right: 0;
+     object-fit: contain;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+       
+}
+
+.first div{
+     display: flex;
+     flex-direction: column;
+}
+
+.first > div :first-child{
+     font-size: 48px;
+     font-weight: bold;
+}
+
+.first > div :nth-child(2){
+     font-size: 24px;
+}
+
+.third-box img{
+     width: 36vw;
+     position: relative;
+     z-index: 10;
+}
+.third-box video{
+     position: relative; 
+     top: 51px;
+     right: 0;
+     object-fit: contain;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+       
+}
+
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+
+     <style>
+          .bg-green{
+               background-color: green;
+          }
+     </style>
+</head>
+<body> 
+     <div class="container red bg-green  ">
+          <div class="box" style="display: flex;">HEY I AM A BOX</div>
+          <div class="box" data-createdby="sagar" data-conceptby="naman">HEY I AM A BOX2</div>
+     </div>
+
+     <script>
+          let cont = document.querySelector(".container");
+          cont.insertAdjacentHTML("afterbegin","<b>mai gira hua banda jama nich baliye<b>")
+     </script>
+</body>
+</html>

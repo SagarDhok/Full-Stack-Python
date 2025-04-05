@@ -1,0 +1,1 @@
+# class ZeroNumError(Exception):pass

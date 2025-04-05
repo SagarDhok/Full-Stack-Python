@@ -1,0 +1,24 @@
+ #first {
+        background-color: green;
+    }
+
+    #second {
+        background-color: orange;
+        color: black;
+    }
+
+    .red {
+        background-color: white;
+        color: black;
+    }
+
+    .bg-blue {
+        background-color: green;
+        color: white;
+    }
+    div{
+        background-color: yellow;
+    }
+    #head{
+        background-color:  aqua;
+    }

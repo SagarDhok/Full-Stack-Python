@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Country Capitals</title>
+<style>
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+  #capital {
+    color: blue; /* Change color to your preference */
+    font-weight: bold;
+    font-size: 18px; /* Change font size to your preference */
+  }
+</style>
+</head>
+<body>
+    <h1 style="text-align: center;">Select the country name to find its capital : </h1>
+
+Country Name : <select id="countrySelect" onchange="showCapital()">
+  <option value="">Select a country:</option>
+  <option value="usa">USA</option>
+  <option value="uk">UK</option>
+  <option value="france">France</option>
+  <option value="germany">Germany</option>
+  <option value="japan">Japan</option>
+</select>
+
+<p id="capital"></p>
+
+<script>
+function showCapital() {
+  var selectBox = document.getElementById("countrySelect");
+  var capitalPara = document.getElementById("capital");
+  var selectedCountry = selectBox.options[selectBox.selectedIndex].value;
+  var capital;
+
+  switch (selectedCountry) {
+    case "usa":
+      capital = "Washington, D.C.";
+      break;
+    case "uk":
+      capital = "London";
+      break;
+    case "france":
+      capital = "Paris";
+      break;
+    case "germany":
+      capital = "Berlin";
+      break;
+    case "japan":
+      capital = "Tokyo";
+      break;
+    default:
+      capital = "";
+  }
+
+  capitalPara.innerText = capital;
+}
+</script>
+
+</body>
+</html>

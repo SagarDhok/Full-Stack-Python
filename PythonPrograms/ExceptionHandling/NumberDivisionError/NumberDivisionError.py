@@ -1,0 +1,1 @@
+class NumberDivisionError(Exception):pass

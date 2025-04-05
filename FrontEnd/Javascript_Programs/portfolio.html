@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Python Full Stack Developer</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+    
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: radial-gradient(circle at top, #141e30, #243b55);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: rgba(0, 0, 0, 0.85);
+      position: fixed;
+      width: 100%;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      animation: slideDown 1s ease-out;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #00d4ff, #00ff88);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+
+    header nav a:hover {
+      color: #00ff88;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      background: url('hero-bg.jpg') no-repeat center center/cover;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .hero img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 8px solid #00ff88;
+      box-shadow: 0 0 30px rgba(0, 255, 136, 0.7);
+      margin-bottom: 20px;
+      transition: transform 0.5s;
+    }
+
+    .hero img:hover {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .hero h2 {
+      font-size: 4rem;
+      margin: 10px 0;
+      background: linear-gradient(90deg, #00d4ff, #00ff88);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 600px;
+      color: #d9d9d9;
+    }
+
+    .hero button {
+      margin-top: 30px;
+      background: #00ff88;
+      border: none;
+      color: white;
+      padding: 15px 40px;
+      font-size: 1.3rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: transform 0.3s, background 0.3s;
+      box-shadow: 0 5px 15px rgba(0, 255, 136, 0.5);
+    }
+
+    .hero button:hover {
+      background: #00d4ff;
+      transform: translateY(-5px) scale(1.1);
+    }
+
+    .section {
+      padding: 100px 50px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.8);
+      margin: 50px auto;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .section h3 {
+      font-size: 3rem;
+      margin-bottom: 30px;
+      background: linear-gradient(90deg, #00d4ff, #00ff88);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .section p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      color: #d9d9d9;
+    }
+
+    .skills {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 50px;
+      flex-wrap: wrap;
+    }
+
+    .skill {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      flex: 1;
+      max-width: 300px;
+      text-align: left;
+      transition: transform 0.4s, background 0.4s;
+    }
+
+    .skill:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .skill h4 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      background: linear-gradient(90deg, #00d4ff, #00ff88);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.95);
+      padding: 40px 50px;
+      text-align: center;
+      color: white;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 1rem;
+      color: #d9d9d9;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-100%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="your-photo.jpg" alt="Your Photo">
+    <h2>Welcome, I'm a Python Full Stack Developer</h2>
+    <p>Building innovative solutions and creating impactful digital experiences.</p>
+    <button onclick="alert('Let’s create something amazing together!')">Get in Touch</button>
+  </section>
+
+  <section id="about" class="section">
+    <h3>About Me</h3>
+    <p>Driven by curiosity and a passion for solving problems, I specialize in building dynamic and scalable web applications. Proficient in Python, Django, React, and database systems, I aim to create seamless user experiences.</p>
+  </section>
+
+  <section id="skills" class="section">
+    <h3>Skills</h3>
+    <div class="skills">
+      <div class="skill">
+        <h4>Frontend Development</h4>
+        <p>React, HTML, CSS, JavaScript, Bootstrap</p>
+      </div>
+      <div class="skill">
+        <h4>Backend Development</h4>
+        <p>Python, Django, Flask, REST APIs</p>
+      </div>
+      <div class="skill">
+        <h4>Databases</h4>
+        <p>PostgreSQL, MongoDB, MySQL</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <h3>Projects</h3>

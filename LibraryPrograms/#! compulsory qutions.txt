@@ -1,0 +1,18 @@
+#! compulsory qutions
+
+1.display alternative student details
+2.get the last 5 records
+3.find the number of records in dataset and also find the number of records
+4.get the information about number of colums , number of rows , data type of each column and memory mangament - info
+5.get the descriptive statistical information  on non numerical and numerical colums - describe - include all
+6.find the total number of students who passed in disctintion (before solving this quition calculate total marks percentage and grade)
+7.find the names of the people who passed in first and second grade - compound condition bitwise or 
+8.find the name of the person who secured hired percentage
+9.find the name of the person who got the least percentage
+10.find the top 5 performers total marks madhe jast mark paddle te - sorting percentage descending head 
+11.find the second highest student details in terms of total marks
+12.obtain top 5 highest scorer in mathemathics and also other subjects - ascending on maths name and maths marks print karyache
+13.find the average marks with subject wise - group by 
+14.give 1.5 bonus marks to all maths student 
+15.give 0.5 bonus marks to science students whose science marks ranges between 60-80
+

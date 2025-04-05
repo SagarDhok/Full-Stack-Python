@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function bodyload() {
+        //    window.document.images[0].src = "https://wallpapercave.com/wp/wp2398384.jpg";
+        //    window.document.forms[0].elements[1].value = "register"
+        //    window.document.forms[1].elements[1].value = "login"
+
+        // pic.src="https://wallpapercave.com/wp/wp2398384.jpg"
+        // frmRegister.btnRegister.value = "Register"
+        // frmLogin.btnLogin.value = "Login"
+
+        // document.getElementById("pic").src = "Images\\backiee-123754.jpg";
+        // document.getElementById("btnRegister").value = "REGISTER";
+        // document.getElementById("btnLogin").value = "LOGIN";
+
+      
+    //  document.querySelector(".pic").src ="Images\\backiee-123754.jpg"
+    //  document.querySelector("#btnRegister").value = "REGISTER"
+    //  document.querySelector(".btnLogin").value = "LOGIN"
+
+
+
+      }
+    </script>
+
+    <style>
+     .btnRegister {
+          background-color: yellow;
+     }
+    </style>
+  </head>
+  <body onload="bodyload()">
+    <div>
+      <img src="" class="pic" id="pic" border="2" name="pic" height="100" width="100" />
+    </div>
+
+    <div>
+      <h3>Register</h3>
+      <form name="frmRegister">
+        Username : <input name="txtemail" type="email" />
+        <input id="btnRegister" class="btnRegister" name="btnRegister" type="button" />
+      </form>
+    </div>
+
+    <div>
+      <h3>Login</h3>
+      <form name="frmLogin">
+        Mobile : <input name="txt" type="text" />
+        <input id="btnLogin" class="btnLogin" name="btnLogin" type="button" />
+      </form>
+    </div>
+  </body>
+</html>

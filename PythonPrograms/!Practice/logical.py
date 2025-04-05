@@ -1,0 +1,5 @@
+# print(1.2 and 2.4)
+# print(True and False)
+# print(False or None )
+# print(False and None )
+# print(1.4 or 2.4 )

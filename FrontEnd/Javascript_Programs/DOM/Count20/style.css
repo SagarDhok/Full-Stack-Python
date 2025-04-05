@@ -1,0 +1,28 @@
+body{
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: antiquewhite;
+}
+#main{
+     height: 100vh;
+     border: 2px solid black ;
+     height: 40vh;
+     width: 40vw;
+     background-color: white;
+     box-shadow: 2px 2px 2px 2px ;
+}
+#count{
+     margin: 20px;
+     flex-direction: column;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+#buttons{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 10px;
+}

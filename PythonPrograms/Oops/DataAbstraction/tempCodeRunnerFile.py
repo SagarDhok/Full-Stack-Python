@@ -1,0 +1,5 @@
+print("Account Holder Number : ",ao.acno)
+print("Account Holder Name : ",ao.name)
+print("Account Balence : ",ao.bal)
+print("Account Pin : ",ao.pin)
+print("Bank Name : ",ao.bank)

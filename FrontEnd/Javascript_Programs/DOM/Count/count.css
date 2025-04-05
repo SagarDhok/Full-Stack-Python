@@ -1,0 +1,28 @@
+body {
+     height: 100vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+   }
+   #main {
+     border: 2px solid black;
+     width: 30vw;
+     height: 30vh;
+     background-color: skyblue;
+     box-shadow: 3px 3px 6px;
+   }
+
+   #count {
+     height: 10vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: larger;
+   }
+
+   #buttons{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 10%;
+   }

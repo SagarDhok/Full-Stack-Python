@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <script>
+          function del(){
+               // alert("File delted \nsuccessfully ")
+               res = confirm("Record will be delted \n are you sure : ")
+               console.warn("Delete button clicked ")
+
+               if (res == true){
+                    // alert("Record deleted successfully : ")
+                    // document.write("<font size='10', color='green'><b>Record deleted successfully </b></font> <br> <a href='Output.html'> back</a>")
+                    // document.querySelector('p').innerText="RECORD DELETED SUCCESSFULLY"             
+                    // document.querySelector('p').innerHTML="<b>RECORD DELETED SUCCESSFULLY</b>"             
+                    // document.querySelector('p').outerHTML="<h2>RECORD DELETED SUCCESSFULLY</h2>"             
+                    //     console.error("Ok confirmed - delete  processes")
+
+               }
+               else{
+                    // alert("Cancled..")
+                    console.info("Cancel clicked - delete canceled")
+               }
+
+          }
+     </script>
+</head>
+<body>
+     <button onclick="del()">Delete</button>
+     <p></p>
+     
+</body>
+</html>

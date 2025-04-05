@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battery percentage</title>
+    <style>
+
+    
+          body{
+            background-color: black;
+                    }          
+          .battery{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 30vh ;
+     }
+     
+
+     .topbar{
+        height: 10px;
+        width: 30px;
+        background-color: black;
+        border: 1px solid silver;
+         border-top-left-radius: 7px;
+         border-top-right-radius: 7px;
+         border-bottom: 3px solid silver; 
+      
+     }
+
+     .container{
+            height: 150px;
+            width: 65px;
+            background-color: black;
+            border: 1px solid silver;
+            border-radius: 7px;
+            position: relative;
+     }
+     .charging{
+        width: 65px;
+      border-radius: 7px;
+      position: absolute;
+       bottom: 47.8%;
+       animation: 5s charging-animation linear infinite;
+     }
+    
+     @keyframes charging-animation {
+      0.1%{
+         
+      }
+     5%{
+        height: 25px ;
+        background-color: #f81c1c;
+          
+     }
+
+     25%{
+        height: 70px;
+        background-color: rgb(176, 115, 2);
+     }
+      50%{
+        height: 105px;
+        background-color: rgb(251, 251, 50);     
+      }
+      100%{
+        height: 152px;
+        background-color: rgb(14, 255, 14);
+      }
+     }
+
+
+    </style>
+</head>
+<body>
+      <div class="battery">
+    <div class="topbar"></div>
+    <div class="container"></div>
+    <div class="charging"></div>
+    </div>
+</body>
+</html>

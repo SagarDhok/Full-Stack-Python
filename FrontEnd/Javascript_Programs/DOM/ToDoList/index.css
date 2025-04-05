@@ -1,0 +1,114 @@
+/* General reset */
+body, h1, p, button {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+   }
+   
+   /* Body styling */
+   body {
+     font-family: 'Roboto', sans-serif;
+     background: linear-gradient(135deg, #f8c6d0, #f06292);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding: 20px;
+   }
+   
+   /* Main container */
+   #main {
+     display: flex;
+     gap: 10px;
+     margin-bottom: 20px;
+   }
+   
+   /* Input field */
+   #InptElmt {
+     padding: 15px;
+     font-size: 1rem;
+     border: 2px solid #ff6f61;
+     border-radius: 50px;
+     outline: none;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     transition: border-color 0.3s, box-shadow 0.3s;
+   }
+   
+   #InptElmt:focus {
+     border-color: #ff4c4c;
+     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+   }
+   
+   /* Button styles */
+   button {
+     padding: 12px 25px;
+     font-size: 1rem;
+     border-radius: 50px;
+     cursor: pointer;
+     border: none;
+     color: #fff;
+     background-color: #ff6f61;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+   }
+   
+   button:hover {
+     background-color: #ff4c4c;
+     transform: translateY(-3px);
+     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+   }
+   
+   /* To-do container */
+   #OutputDiv {
+     width: 100%;
+     max-width: 600px;
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+   }
+   
+   /* To-do item */
+   .NewDiv {
+     background: linear-gradient(135deg, #ffffff, #e8e8e8);
+     border-radius: 12px;
+     padding: 15px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+     transition: transform 0.3s, box-shadow 0.3s;
+   }
+   
+   .NewDiv:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+   }
+   
+   /* Paragraph style */
+   .NewDiv p {
+     margin: 0;
+     flex: 1;
+     font-size: 1.1rem;
+     color: #333;
+   }
+   
+   /* Save button */
+   button.save {
+     background-color: #28a745;
+   }
+   
+   button.save:hover {
+     background-color: #218838;
+   }
+   
+   /* Delete button */
+   button.delete {
+     background-color: #dc3545;
+   }
+   
+   button.delete:hover {
+     background-color: #c82333;
+   }
+   
+   #si{
+    margin: 50px;
+   }
