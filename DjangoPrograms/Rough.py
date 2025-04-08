@@ -48,8 +48,24 @@
 
 
 
-name = "python" 
-if name == "java" or name == "html" or name == "css":
-    print("Login Successfully")
-else: 
-    print("not valid")
+# name = "python" 
+# if name == "java" or name == "html" or name == "css":
+#     print("Login Successfully")
+# else: 
+#     print("not valid")
+
+
+from pathlib import Path
+# print("current file",__file__)  #current file e:\FULL STACK PYTHON\DjangoPrograms\Rough.py
+
+# fpath = Path(__file__)
+# print(type(fpath))  #<class 'pathlib.WindowsPath'>
+# print("current file",fpath)  #current file e:\FULL STACK PYTHON\DjangoPrograms\Rough.py
+
+# complete_path = fpath.resolve()
+# print("Complete path",complete_path)#Complete path E:\FULL STACK PYTHON\DjangoPrograms\Rough.py
+
+# print("Complete path",Path(__file__).resolve())# Complete path E:\FULL STACK PYTHON\DjangoPrograms\Rough.py
+
+# print(Path(__file__).resolve().parent) #E:\FULL STACK PYTHON\DjangoPrograms
+print(Path(__file__).resolve().parent.parent) #E:\FULL STACK PYTHON
