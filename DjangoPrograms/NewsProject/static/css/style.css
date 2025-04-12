@@ -1,0 +1,134 @@
+/* 🔥 Reset & Setup */
+* {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Poppins', sans-serif;
+                scroll-behavior: smooth;
+            }
+            
+            body {
+                background: linear-gradient(145deg, #1e1e2f, #292942);
+                color: #fff;
+                padding: 2rem;
+                perspective: 1200px;
+                overflow-x: hidden;
+            }
+            
+            /* ✨ Heading Animation */
+            h1 {
+                text-align: center;
+                font-size: 3.5rem;
+                margin-bottom: 3rem;
+                color: #00ffe7;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                animation: slideIn 1s ease-in-out;
+                transform-style: preserve-3d;
+                transform: rotateX(10deg);
+            }
+            
+            /* 💫 Link Buttons */
+            ul {
+                display: flex;
+                justify-content: center;
+                gap: 2rem;
+                list-style: none;
+                margin-bottom: 3rem;
+                flex-wrap: wrap;
+                transform-style: preserve-3d;
+                animation: fadeIn 2s ease-in;
+            }
+            
+            ul li {
+                perspective: 800px;
+            }
+            
+            ul li a {
+                text-decoration: none;
+                background: #ff0099;
+                color: #fff;
+                padding: 1rem 2rem;
+                border-radius: 15px;
+                font-weight: bold;
+                font-size: 1.1rem;
+                box-shadow: 0 0 20px #ff0099aa;
+                transition: transform 0.5s ease, box-shadow 0.4s ease;
+                display: inline-block;
+                transform-style: preserve-3d;
+            }
+            
+            ul li a:hover {
+                transform: rotateY(15deg) scale(1.1);
+                box-shadow: 0 0 30px #ff0099cc, 0 0 60px #ff00cc88;
+            }
+            
+            /* 🖼️ Images with 3D Card Animation */
+            img {
+                display: block;
+                width: 320px;
+                height: auto;
+                margin: 1.5rem auto;
+                border-radius: 25px;
+                box-shadow: 0 15px 35px rgba(0, 255, 255, 0.25);
+                transform-style: preserve-3d;
+                transition: transform 0.5s ease, box-shadow 0.5s ease;
+            }
+            
+            img:hover {
+                transform: rotateY(20deg) rotateX(10deg) scale(1.05);
+                box-shadow: 0 20px 60px rgba(0, 255, 255, 0.5);
+            }
+            
+            /* 🌈 Glow Pulse Animation */
+            @keyframes glowPulse {
+                0% {
+                    box-shadow: 0 0 10px #00ffe7, 0 0 20px #00ffe7;
+                }
+                50% {
+                    box-shadow: 0 0 30px #00ffe7, 0 0 60px #00ffe7;
+                }
+                100% {
+                    box-shadow: 0 0 10px #00ffe7, 0 0 20px #00ffe7;
+                }
+            }
+            
+            /* 🚀 Entry Animations */
+            @keyframes slideIn {
+                0% {
+                    transform: translateY(-100px) rotateX(45deg);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateY(0) rotateX(10deg);
+                    opacity: 1;
+                }
+            }
+            
+            @keyframes fadeIn {
+                0% {
+                    opacity: 0;
+                    transform: translateZ(-200px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateZ(0);
+                }
+            }
+            
+            /* 📱 Responsive Breakpoints */
+            @media (max-width: 768px) {
+                h1 {
+                    font-size: 2.5rem;
+                }
+            
+                ul {
+                    flex-direction: column;
+                    align-items: center;
+                }
+            
+                img {
+                    width: 90%;
+                }
+            }
+            
