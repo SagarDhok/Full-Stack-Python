@@ -13,4 +13,4 @@ Whether you're building with **Django**, styling with **CSS**, flexing **React**
 - ⚛️ **React/!Practice** – React.js experiments, components, and frontend goodness  
 - 🗄️ **Database** & **DatabaseProject** – SQL queries, schemas, and DB-driven apps  
 - 🐍 **PythonPrograms** – Handy core Python scripts & practice programs  
-- 📚 **LibraryPrograms** – Python programs using **NumPy**, **P**
+- 📚 **LibraryPrograms** – Python programs using **NumPy**, **Pandas**
