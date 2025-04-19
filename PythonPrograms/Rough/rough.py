@@ -2605,3 +2605,11 @@
 
 # print(bin(~5))
 
+
+class sample():pass
+
+s1= sample()
+print(s1.__dict__)
+s1.sno = 10
+s1.sname = "sagar"
+print(s1.__dict__)

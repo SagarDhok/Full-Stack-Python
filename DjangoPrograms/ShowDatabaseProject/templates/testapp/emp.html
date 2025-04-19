@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Employee Data</title>
+                <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+                <h1>Employee List</h1>
+                {% if emp_list %}
+                <table>
+                                <thead>
+                                                <th>ENO</th>
+                                                <th>ENAME</th>
+                                                <th>ESALALY</th>
+                                                <th>EADDRESS</th>
+
+                                </thead>
+                                {% for emp in emp_list %}
+                                <tr>
+                                                <td>{{emp.eno}}</td>
+                                                <td>{{emp.ename}}</td>
+                                                <td>{{emp.sal}}</td>
+                                                <td>{{emp.eadd}}</td>
+                                </tr>
+
+                                {% endfor %}
+
+
+                </table>
+                {% else %}
+                <p>NO RECORDS FOUND</p>
+                {% endif %}
+
+</body>
+
+</html>
