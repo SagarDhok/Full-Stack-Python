@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Student Information</title>
+                <link rel="stylesheet" href="{%static 'css/style.css'%}">
+</head>
+
+<body>
+                <h1>Student Information</h1>
+                {% if student_list %}
+                {% for student in student_list %}
+
+                <h2>{{student.name}}</h2>
+                <ul>
+                                <li>Student RollNo : {{student.rollno}}</li>
+                                <li>Student DOB : {{student.dob}}</li>
+                                <li>Student Marks : {{student.marks}}</li>
+                                <li>Student Email : {{student.email}}</li>
+                                <li>Student Phone Number : {{student.phonenumber}}</li>
+                                <li>Student Roll No : {{student.address}}</li>
+
+                </ul>
+                <hr>
+                {% endfor %}
+                {% else %}
+                <p>No Records Found in database....</p>
+                {% endif %}
+
+
+</body>
+
+</html>

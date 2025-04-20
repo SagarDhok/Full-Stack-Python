@@ -68,4 +68,8 @@ from pathlib import Path
 # print("Complete path",Path(__file__).resolve())# Complete path E:\FULL STACK PYTHON\DjangoPrograms\Rough.py
 
 # print(Path(__file__).resolve().parent) #E:\FULL STACK PYTHON\DjangoPrograms
-print(Path(__file__).resolve().parent.parent) #E:\FULL STACK PYTHON
+# print(Path(__file__).resolve().parent.parent) #E:\FULL STACK PYTHON
+
+
+
+
