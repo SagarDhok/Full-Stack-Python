@@ -23,7 +23,7 @@ def populate(n):
       frollno = fake.random_int(min=1,max=999)
       fname = fake.name()
       fdob = fake.date()
-      fmarks = fake.random_int(min=1,max=999)
+      fmarks = fake.random_int(min=1,max=100)
       femail = fake.email()
       fphonenumber = phonenumbergen()
       faddress = fake.address()
