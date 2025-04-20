@@ -56,3 +56,5 @@ fk = Faker()
 
 # print(phonenumbergen())
 
+for i in range(10): 
+ print(Faker().phone_number())
