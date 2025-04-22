@@ -16,9 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Jobsapp.views import home_page_view
+from Jobsapp.views import home_page_view,hydjobs_info,punejobs_info,banglorejobs_info
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("",home_page_view)
+    path("",home_page_view),
+    path("hyd/",hydjobs_info),
+    path("pune/",punejobs_info),
+    path("bang/",banglorejobs_info),
 ]

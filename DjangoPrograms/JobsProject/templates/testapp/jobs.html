@@ -1,16 +1,114 @@
 <!DOCTYPE html>
-  {%load static%}
+{% load static %}
 <html lang="en">
+
 <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Document</title>
-                <link rel="stylesheet" href="{% static 'css/jobs.css' %}">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Listings</title>
+  <link rel="stylesheet" href="{% static 'css/jobs.css' %}?v=1" />
 </head>
+
 <body>
+  {% if type == "hyd" %}
+    <h1>Hyderabad Jobs</h1>
+    {% if hydjobs_list %}
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Company</th>
+            <th>Title</th>
+            <th>Eligibility</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for jobs in hydjobs_list %}
+            <tr>
+              <td data-label="Date">{{ jobs.date }}</td>
+              <td data-label="Company">{{ jobs.company }}</td>
+              <td data-label="Title">{{ jobs.title }}</td>
+              <td data-label="Eligibility">{{ jobs.eligibility }}</td>
+              <td data-label="Address">{{ jobs.address }}</td>
+              <td data-label="Email">{{ jobs.email }}</td>
+              <td data-label="Phone Number">{{ jobs.phonenumber }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>No Records Found</p>
+    {% endif %}
 
-                
+  {% elif type == "pune" %}
+    <h1>Pune Jobs</h1>
+    {% if punejobs_list %}
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Company</th>
+            <th>Title</th>
+            <th>Eligibility</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for jobs in punejobs_list %}
+            <tr>
+              <td data-label="Date">{{ jobs.date }}</td>
+              <td data-label="Company">{{ jobs.company }}</td>
+              <td data-label="Title">{{ jobs.title }}</td>
+              <td data-label="Eligibility">{{ jobs.eligibility }}</td>
+              <td data-label="Address">{{ jobs.address }}</td>
+              <td data-label="Email">{{ jobs.email }}</td>
+              <td data-label="Phone Number">{{ jobs.phonenumber }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>No Records Found</p>
+    {% endif %}
 
-                
+  {% elif type == "bang" %}
+    <h1>Bangalore Jobs</h1>
+    {% if bngjobs_list %}
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Company</th>
+            <th>Title</th>
+            <th>Eligibility</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for jobs in bngjobs_list %}
+            <tr>
+              <td data-label="Date">{{ jobs.date }}</td>
+              <td data-label="Company">{{ jobs.company }}</td>
+              <td data-label="Title">{{ jobs.title }}</td>
+              <td data-label="Eligibility">{{ jobs.eligibility }}</td>
+              <td data-label="Address">{{ jobs.address }}</td>
+              <td data-label="Email">{{ jobs.email }}</td>
+              <td data-label="Phone Number">{{ jobs.phonenumber }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>No Records Found</p>
+    {% endif %}
+  {% endif %}
 </body>
+
 </html>

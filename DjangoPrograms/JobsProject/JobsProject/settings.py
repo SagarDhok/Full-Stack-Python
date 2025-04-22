@@ -1,20 +1,17 @@
-import os
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+TEMPLATES_DIR = BASE_DIR / 'templates'
+STATIC_DIR = BASE_DIR / 'static'
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
-
-SECRET_KEY = 'your-secret-key-here'  # Don't forget to change this!
-
+# Security settings
+SECRET_KEY = 'your-secure-key-here'  # Replace with your real key in production!
 DEBUG = True
-
 ALLOWED_HOSTS = []
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -22,7 +19,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Jobsapp',  # Add your app name here
+    'Jobsapp',  # Your app
 ]
 
 MIDDLEWARE = [
@@ -40,7 +37,7 @@ ROOT_URLCONF = 'JobsProject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],  # Add templates directory here
+        'DIRS': [TEMPLATES_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -55,23 +52,19 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'JobsProject.wsgi.application'
 
-# Database
-# https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
+# Database configuration
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'jobsdb',  # Your database name
-        'USER': 'root',  # Your username (typically 'root' for MySQL)
-        'PASSWORD': '1234',  # Your password
-        'HOST': 'localhost',  # Use 'localhost' if the DB is on your local machine
-        'PORT': '3306',  # Default MySQL port
+        'NAME': 'jobsdb',
+        'USER': 'root',
+        'PASSWORD': '1234',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
-# Password validation
-# https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
-
+# Password validators
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -88,19 +81,14 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # Internationalization
-# https://docs.djangoproject.com/en/4.1/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_TZ = True
 
-# Static files (CSS, JavaScript, images)
-# https://docs.djangoproject.com/en/4.1/howto/static-files/
-
+# Static files (CSS, JS, images)
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [STATIC_DIR]
 
+# Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
