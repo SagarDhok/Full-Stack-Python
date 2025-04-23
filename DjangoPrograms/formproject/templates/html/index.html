@@ -8,7 +8,16 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
   <body>
+    {% if submitted %}
+     <h1>Student with the name:{{sname}} processed successfully</h1>
+     <h2>Enter next student information</h2>
+     <br>
+     <hr class="i">
+    {% else %}
+   
     <h1>Student Input Information</h1>
+    {% endif %}
+
     <div class="main">
       <div class="container">
         <form method="post">
