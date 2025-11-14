@@ -130,15 +130,20 @@ print(f"The indices of the two numbers such that their sum is equal to the {targ
 # Example:
 # Input: [1, 2, 3, 4]
 # Output: [24, 12, 8, 6]
-# 7.	Merge Intervals
+
+
+# #^--------------------------------------------------------------------------------------------------
+#! 7.Merge Intervals
 # Given a collection of intervals, merge all overlapping intervals.
 # Example:
 # Input: [[1,3], [2,6], [8,10], [15,18]]
 # Output: [[1,6], [8,10], [15,18]]
+# #^--------------------------------------------------------------------------------------------------
 # 8.	Container with Most Water
 # Given an array where each element represents the height of a vertical line, find two lines that together with the x-axis form a container that holds the most water.
 # Example:
 # Input: [1,8,6,2,5,4,8,3,7]
+# #^--------------------------------------------------------------------------------------------------
 # Output: 49
 # 9.	Trapping Rain Water
 # Given an array representing the height of walls, calculate how much water can be trapped after raining.

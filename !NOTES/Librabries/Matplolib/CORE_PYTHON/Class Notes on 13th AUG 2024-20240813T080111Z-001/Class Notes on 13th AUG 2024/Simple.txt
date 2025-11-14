@@ -1,0 +1,29 @@
+				==================================================
+								1. Simple 
+				==================================================
+=>Python Programming Language is one of the SIMPLE Programming Language bcoz of 3 Important Technical Factors.
+*****************************************************************
+Factor-1
+*****************************************************************
+=>Python Programming Provides "Rich set of MODULES". 
+=>So that Python Programmer can Re-Use the Pre-Defined Code from Pre-Defined Modules and Completes the Task in 
+   Real Time in Limited Span of Time.
+=>Examples:   math, random, calendar,os,threading,csv,json...etc
+---------------------------------
+Definition of Module
+---------------------------------
+=>A Module is a Collection of DATA MEMBERS , FUNCTIONS  and CALSS NAMES.
+=>To verify the Documentation of any module, we use help()
+=>help(module name)
+*****************************************************************
+Factor-2
+*****************************************************************
+=>Python Programming Provides User-Friendly Syntaxes.
+=>So that Python Programmer Can develop Error-Free Programs in Limited Spane of Time.
+*****************************************************************
+Factor-3--Tomorrow sharp--9am-----Garbage Collection Concept--Mem Mgmt
+*****************************************************************
+
+
+
+*****************************************************************

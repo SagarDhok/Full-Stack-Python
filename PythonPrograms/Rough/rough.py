@@ -2606,10 +2606,44 @@
 # print(bin(~5))
 
 
-class sample():pass
+# class sample():pass
 
-s1= sample()
-print(s1.__dict__)
-s1.sno = 10
-s1.sname = "sagar"
-print(s1.__dict__)
+# s1= sample()
+# print(s1.__dict__)
+# s1.sno = 10
+# s1.sname = "sagar"
+# print(s1.__dict__)
+
+
+
+
+import os
+import random
+import string
+from captcha.image import ImageCaptcha
+
+# Folder to save captchas
+output_folder = 'captchas'
+os.makedirs(output_folder, exist_ok=True)
+
+# Characters to use in CAPTCHA
+characters = string.ascii_letters + string.digits
+
+# Create captcha generator object
+image_captcha = ImageCaptcha(width=280, height=90)
+
+def random_captcha_text(length=6):
+    # Generate random text of given length
+    return ''.join(random.choices(characters, k=length))
+
+def generate_captcha_images(count=1000):
+    for i in range(1, count + 1):
+        text = random_captcha_text(random.randint(5,7))  # random length 5 to 7
+        filename = os.path.join(output_folder, f'{i}_{text}.png')
+        image_captcha.write(text, filename)
+        if i % 100 == 0:
+            print(f'{i} CAPTCHA images generated...')
+
+if __name__ == "__main__":
+    generate_captcha_images(1000)
+    print("Done! 1000 CAPTCHA images generated in 'captchas' folder.")
