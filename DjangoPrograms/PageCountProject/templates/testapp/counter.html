@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Count</title>
+  <style>
+    /* Reset default margin and font */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #74ebd5, #9face6);
+    }
+
+    h1 {
+      background-color: white;
+      padding: 20px 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      font-size: 2rem;
+      color: #333;
+    }
+
+    span {
+      color: #4caf50;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5rem;
+        padding: 15px 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>The page count : <span>{{count}}</span></h1>
+</body>
+</html>

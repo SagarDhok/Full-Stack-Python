@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+{% load cust_filter %}
+<html lang="en">
+    <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Document</title>
+                <link rel="stylesheet" href="{% static 'index.css' %}">
+            </head>
+            <body>
+    {% for record in records %}
+        <h1>{{record.name}} Information</h1>
+        <ul>
+        <!-- <li>Name:{{record.name | ffv }}</li> -->
+         <li>Name:{{record.name | fnu:6}}</li>
+        <!-- <li>Name:{{record.name | lower }}</li> -->
+        <!-- <li>Name:{{record.name | title }}</li> -->
+        <li>Subject:{{record.subject | ffv }}</li>
+        <li>Dept:{{record.dept}}</li>
+        <!-- <li>Date:{{record.date | date:'d-m-Y'}}</li>
+        <li>Date:{{record.date | date:'m-d-Y'}}</li>
+        <li>Date:{{record.date | date:'m/d/Y'}}</li>
+        <li>Date:{{record.date | timesince}}</li>
+        <li>Date:{{record.date | date:'d-b-Y'}}</li>
+        <li>Date:{{record.date | date:'l, F j, Y'}}</li> -->
+    </ul><hr>
+    {% endfor %}
+    
+    
+</body>
+</html>

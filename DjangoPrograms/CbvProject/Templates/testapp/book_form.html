@@ -1,0 +1,10 @@
+
+<div class="container" align="center">
+        <h1>Book Insert/Create Form</h1>
+        <form method="post">
+            {{form.as_p}}
+            {% csrf_token %}
+            <input class="btn btn-success" type="submit" value="Insert/Update New Book">
+
+        </form>
+</div>

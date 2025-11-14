@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Confirmation</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to right, #ffe0e0, #ffc2d1);
+      color: #5c2a2a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      background: #fff0f5;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      max-width: 500px;
+      width: 90%;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #d6336c;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      font-size: 1.2em;
+      margin: 10px 0;
+      background: #ffe5ec;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    {% if request.session %}
+      <h1>💌 Thanks for sharing your story... Please confirm below</h1>
+      <ul>
+        {% for key, value in request.session.items %}
+          <li><strong>{{ key|upper }}</strong>: {{ value|title }}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <h1>😢 No information available</h1>
+    {% endif %}
+  </div>
+</body>
+</html>

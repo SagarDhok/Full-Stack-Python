@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Document</title>
+</head>
+<body>
+                {% if movies_list %}
+                <table border="3">
+                                <thead>
+                                                <th>Release Date</th>
+                                                <th>Movie Name</th>
+                                                <th>Hero</th>
+                                                <th>Heroin</th>
+                                                <th>Ratings</th>
+
+                                </thead>
+                                {% for movie in movies_list %}
+                                <tr>
+                                                <td>{{movie.rdate}}</td>
+                                                <td>{{movie.moviename}}</td>
+                                                <td>{{movie.hero}}</td>
+                                                <td>{{movie.heroine}}</td>
+                                                <td>{{movie.rating}}</td>
+                                </tr>
+                                {% endfor %}
+
+
+                </table>
+                {% else %}
+                <h1>No movies found</h1>
+                 {% endif %}
+</body>
+</html>
