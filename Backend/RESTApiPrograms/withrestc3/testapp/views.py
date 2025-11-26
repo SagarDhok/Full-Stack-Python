@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from rest_framework.mixins import CreateModelMixin
 
 # Create your views here.
 
@@ -13,7 +14,7 @@ from rest_framework.response import Response
 #         serializer = EmployeeSerializer(qs,many=True)
 #         return Response(serializer.data)
 
-from rest_framework.generics import CreateAPIView, ListAPIView, RetrieveAPIView, UpdateAPIView,DestroyAPIView
+from rest_framework.generics import CreateAPIView, DestroyAPIView, ListAPIView, ListCreateAPIView, RetrieveAPIView, UpdateAPIView,RetrieveUpdateAPIView,RetrieveDestroyAPIView,RetrieveUpdateDestroyAPIView
 # class EmployeeListAPIView(ListAPIView):
 #     queryset = Employee.objects.all()
 #     serializer_class = EmployeeSerializer
@@ -35,7 +36,57 @@ from rest_framework.generics import CreateAPIView, ListAPIView, RetrieveAPIView,
 #     serializer_class = EmployeeSerializer
 #     lookup_field = 'id'
 
-class EmployeeDestroyAPIView(DestroyAPIView):
+# class EmployeeDestroyAPIView(DestroyAPIView):
+#     queryset = Employee.objects.all()
+#     serializer_class = EmployeeSerializer
+#     lookup_field = 'id'
+
+# class EmployeeListCreateAPIView(ListCreateAPIView):
+#     queryset = Employee.objects.all()
+#     serializer_class = EmployeeSerializer
+
+
+# class EmployeeRetrieveUpdateAPIView(RetrieveUpdateAPIView):
+#     queryset = Employee.objects.all()
+#     serializer_class = EmployeeSerializer
+#     lookup_field = 'id'
+
+
+# class EmployeeRetrieveDestroyAPIView(RetrieveDestroyAPIView):
+#     queryset = Employee.objects.all()
+#     serializer_class = EmployeeSerializer
+#     lookup_field = 'id'
+
+
+# class EmployeeRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
+#     queryset = Employee.objects.all()
+#     serializer_class = EmployeeSerializer
+#     lookup_field = 'id'
+
+
+
+from rest_framework import mixins
+# class EmployeeListCreateModelMixin(mixins.CreateModelMixin,ListAPIView):
+#     queryset = Employee.objects.all()
+#     serializer_class = EmployeeSerializer
+#     def post(self,request,*args,**kwargs):
+#         return self.create(request,*args,**kwargs)
+
+
+
+class EmployeeRetrieveUpdateDestroyModelMixin(
+    mixins.UpdateModelMixin,
+    mixins.DestroyModelMixin,
+    RetrieveAPIView
+):
     queryset = Employee.objects.all()
     serializer_class = EmployeeSerializer
-    lookup_field = 'id'
+
+    def put(self, request, *args, **kwargs):
+        return self.update(request, *args, **kwargs)
+
+    def patch(self, request, *args, **kwargs):
+        return self.partial_update(request, *args, **kwargs)
+
+    def delete(self, request, *args, **kwargs):
+        return self.destroy(request, *args, **kwargs)

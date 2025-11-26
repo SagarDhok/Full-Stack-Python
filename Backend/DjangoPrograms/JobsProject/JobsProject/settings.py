@@ -20,6 +20,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Jobsapp',  # Your app
+    'rest_framework'
 ]
 
 MIDDLEWARE = [

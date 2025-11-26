@@ -20,5 +20,9 @@ from testapp.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', emp_data_view),
+    path('api/', emp_data_view),
+    path('apijson/', emp_data_json_view),
+    path('apijson2/', emp_data_json_view2),
+    path('apijsoncbv/',JSONCBV.as_view())
+    
 ]

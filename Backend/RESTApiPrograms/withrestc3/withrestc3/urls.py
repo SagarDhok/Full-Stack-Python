@@ -25,5 +25,11 @@ urlpatterns = [
     # path('api/<int:pk>', views.EmployeeRetrieveView.as_view()),
     # path('api/<int:id>', views.EmployeeRetrieveView.as_view())
     # path('api/<int:id>', views.EmployeeUpdateAPIView.as_view())
-    path('api/<int:id>', views.EmployeeDestroyAPIView.as_view())
+    # path('api/<int:id>', views.EmployeeDestroyAPIView.as_view()).
+    # path('api/', views.EmployeeListCreateAPIView.as_view())
+    # path('api/<int:id>', views.EmployeeRetrieveUpdateAPIView.as_view())
+    # path('api/<int:id>', views.EmployeeRetrieveDestroyAPIView.as_view())
+    # path('api/<int:id>', views.EmployeeRetrieveUpdateDestroyAPIView.as_view())
+    # path('api/',views.EmployeeListCreateModelMixin.as_view())
+  path('api/<int:pk>/',views.EmployeeRetrieveUpdateDestroyModelMixin.as_view())
 ]

@@ -21,8 +21,11 @@ from testapp  import views
 
 from rest_framework.routers import DefaultRouter
 router = DefaultRouter()
-router.register('api',views.EmplyeeCRUDCBV)
+router.register('api', views.EmployeeCRUDCBV)
+
+from rest_framework.authtoken import views
 urlpatterns = [
     path('admin/', admin.site.urls),  
-    path('',include(router.urls))
+    path('',include(router.urls)),
+    path('get-api-token/',views.obtain_auth_token,name='get-api-token')
 ]
